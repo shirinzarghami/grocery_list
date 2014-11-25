@@ -7,17 +7,9 @@
    <th> Explanation  .</th>
    <th> Bought  .</th>
   </tr>
-  <% @groceries.each do |grocery|%>
-    <tr>
-      <td><%= grocery.category %></td>
-      <td> <%= grocery.name %></td>
-      <td><%= grocery.number %></td>
-      <td><%= grocery.explanation %></td>
-      <td><%= grocery.bought %></td>
-      <td><%= link_to 'Edit', edit_grocery_path(grocery) %> </td>
-      <td><%= link_to 'Destroy', grocery_path(grocery), method: :delete, data: { confirm: 'Are u sure'}%> </td>
-    </tr>
-  <% end %>
+
+  <%= render partial: 'grocery', collection: @groceries %>
+
   <tr> <%= link_to 'New article', new_grocery_path %> </tr>
 </table>
 

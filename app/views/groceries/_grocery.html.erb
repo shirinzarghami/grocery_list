@@ -1,0 +1,9 @@
+<tr>
+  <td><%= grocery.category %></td>
+  <td> <%= grocery.name %></td>
+  <td><%= grocery.number %></td>
+  <td><%= grocery.explanation %></td>
+  <td><%= grocery.bought %></td>
+  <td><%= link_to 'Edit', edit_grocery_path(grocery) %> </td>
+  <td><%= link_to 'Destroy', grocery_path(grocery), method: :delete, data: { confirm: 'Are u sure'}%> </td>
+</tr>
