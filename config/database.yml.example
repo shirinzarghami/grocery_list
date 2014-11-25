@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: grocery_development
+  min_messages: WARNING
+  socket: /var/run/postgresql
+
+test: &test
+  adapter: postgresql
+  database: grocery_test
+  min_messages: WARNING
+  socket: /var/run/postgresql
+
+production:
+  <<: *test
