@@ -1,7 +1,4 @@
 class GroceriesController < ApplicationController
-  def index
-
-  end
 
   def new
     @grocery= Grocery.new()
@@ -10,7 +7,7 @@ class GroceriesController < ApplicationController
   def create
     @grocery =Grocery.new(grocery_params)
     if @grocery.save
-      redirect_to @grocery
+      redirect_to groceries_path
     else
       render 'new'
     end
@@ -25,11 +22,11 @@ class GroceriesController < ApplicationController
   end
 
   def edit
-      @grocery= Grocery.find(params[ :id])
+    @grocery= Grocery.find(params[ :id])
   end
 
   def update
-     @grocery = Grocery.find(params[:id])
+    @grocery = Grocery.find(params[:id])
     if @grocery.update(grocery_params)
       redirect_to @grocery
     else
@@ -38,12 +35,13 @@ class GroceriesController < ApplicationController
   end
 
   def destroy
-      @grocery= Grocery.find(params[ :id])
-      @grocery.destroy
+    @grocery= Grocery.find(params[ :id])
+    @grocery.destroy
 
-      redirect_to groceries_path
+    redirect_to groceries_path
   end
-private
+
+  private
   def grocery_params
     params.require(:grocery).permit(:name, :number, :category, :explanation, :bought)
   end
