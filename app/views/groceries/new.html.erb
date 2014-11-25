@@ -1,0 +1,39 @@
+<%= form_for :grocery, url: groceries_path  do |f| %>
+  <% if @grocery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grocery.errors.count, "error") %> prohibited
+        this grocery from being saved:</h2>
+      <% end %>
+      <ul>
+        <% @grocery.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :number %><br>
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.label :explanation %><br>
+    <%= f.text_area :explanation %>
+  </p>
+  <p>
+    <%= f.label :bought %><br>
+    <%= f.check_box :bought, {}, "true", "false"%>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
