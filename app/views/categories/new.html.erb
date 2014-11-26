@@ -1,5 +1,5 @@
 <%= form_for :category, url: categories_path  do |f| %>
-  <%= render partial: 'errorValidation'%>
+  <%= render partial: 'error_validation'%>
   <%= render partial: 'form', locals: {f: f} %>
 <% end%>
 
