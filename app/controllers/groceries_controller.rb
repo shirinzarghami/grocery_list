@@ -23,6 +23,7 @@ class GroceriesController < ApplicationController
 
   def edit
     @grocery= Grocery.find(params[ :id])
+
   end
 
   def update
