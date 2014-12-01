@@ -8,7 +8,13 @@
    <th> Bought  .</th>
   </tr>
   <tr>
-    <td><%= @grocery.category %></td>
+    <td>
+      <ul>
+        <% @grocery.categories.each do |category| %>
+          <li><%= category.name %></li>
+        <% end %>
+      </ul>
+    </td>
     <td> <%= @grocery.name %></td>
     <td><%= @grocery.number %></td>
     <td><%= @grocery.explanation %></td>

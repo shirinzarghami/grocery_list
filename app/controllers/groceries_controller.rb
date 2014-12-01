@@ -2,9 +2,11 @@ class GroceriesController < ApplicationController
 
   def new
     @grocery= Grocery.new()
+    @category = Category.new()
   end
 
   def create
+    # debugger
     @grocery =Grocery.new(grocery_params)
     if @grocery.save
       redirect_to groceries_path
@@ -27,6 +29,7 @@ class GroceriesController < ApplicationController
   end
 
   def update
+    # debugger
     @grocery = Grocery.find(params[:id])
     if @grocery.update(grocery_params)
       redirect_to @grocery
@@ -44,6 +47,6 @@ class GroceriesController < ApplicationController
 
   private
   def grocery_params
-    params.require(:grocery).permit(:name, :number, :category, :explanation, :bought)
+    params.require(:grocery).permit(:name, :number, :category, :explanation, :bought, category_ids: [])
   end
 end

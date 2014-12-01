@@ -1,5 +1,5 @@
 <tr>
-  <td><%= grocery.category %></td>
+  <td><%= grocery.categories.map {|c| c.name}.join(', ') %></td>
   <td> <%= grocery.name %></td>
   <td><%= grocery.number %></td>
   <td><%= grocery.explanation %></td>

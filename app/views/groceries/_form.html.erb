@@ -19,5 +19,11 @@
   <%= f.check_box :bought, {}, "true", "false"%>
 </p>
 <p>
+  <% Category.all.each do |category| %>
+    <%= check_box_tag "grocery[category_ids][]", category.id %>
+    <%= category.name%>
+  <% end %>
+</p>
+
   <%= f.submit %>
 </p>
