@@ -1,11 +1,10 @@
-<% if @category.errors.any? %>
-  <div id="error_explanation">
+<div id="error_explanation">
+  <% if @category.errors.any? %>
     <h2><%= pluralize(@category.errors.count, "error") %> prohibited
-      this category from being saved:</h2>
-    <% end %>
-    <ul>
-      <% @category.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    </ul>
-  </div>
-<% end %>
+      this category from being saved:
+    </h2>
+  <% end %>
+  <% @category.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</div>

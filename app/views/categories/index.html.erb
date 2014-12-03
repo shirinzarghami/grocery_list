@@ -1,14 +1,14 @@
-<h1>Categories list</h1>
-<table>
-  <tr>
-    <th> category name</th>
-  </tr>
-  <tr>
-    <%= render partial: 'category', collection: @categories %>
-  </tr>
-  <tr>
-    <%= link_to 'New category', new_category_path %>
-  </tr>
+<h2>Categories list</h2>
+<table class="table table-hover table-striped">
+  <thead>
+    <tr> category name </tr>
+  </thead>
+  <tbody>
+    <tr> <%= render partial: 'category', collection: @categories %></tr>
+  </tbody>
 </table>
+<%= link_to 'NewCategory', new_category_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-plus aria-hidden="true"' %>
+<%= link_to "Home", groceries_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-home aria-hidden="true"' %>
+
 
 

@@ -1,16 +1,19 @@
 <h1>Grocery List</h1>
-<table>
+<table class="table table-hover table-striped">
   <tr>
-   <th> Category  .</th>
-   <th> Name  .</th>
-   <th> Number  .</th>
-   <th> Explanation  .</th>
-   <th> Bought  .</th>
+   <th> Category </th>
+   <th> Name</th>
+   <th> Number</th>
+   <th> Explanation</th>
+   <th> Bought</th>
   </tr>
 
   <%= render partial: 'grocery', collection: @groceries %>
+  </table>
+    <%= link_to 'NewGroceryList  ', new_grocery_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-plus aria-hidden="true"' %>
 
-  <tr> <%= link_to 'New article', new_grocery_path %> </tr>
-  <tr> <%= link_to 'Category List', categories_path %> </tr>
-</table>
+    <%= link_to 'CategoryList', categories_path, class: 'glyphicon glyphicon-list aria-hidden="true"'%>
+
+
+
 

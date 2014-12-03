@@ -1,7 +1,9 @@
-<p>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</p>
-<p>
-  <%= f.submit %>
-</p>
+<form class: "form-inline" role: "form">
+  <div class="form-group">
+    <%= f.label :"Category name" %><br>
+    <%= f.text_field :name %>
+    <%= f.submit class: 'btn btn-default btn-xs'%><br>
+    <%= link_to "Back", categories_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-arrow-left aria-hidden="true"' %>
+    <%= link_to "Home", groceries_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-home aria-hidden="true"' %>
+  </div>
+</form>
