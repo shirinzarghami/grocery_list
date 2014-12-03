@@ -32,7 +32,7 @@ class GroceriesController < ApplicationController
     # debugger
     @grocery = Grocery.find(params[:id])
     if @grocery.update(grocery_params)
-      redirect_to @grocery
+      redirect_to :action => 'index'
     else
       render 'edit'
     end

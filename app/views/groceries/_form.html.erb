@@ -20,7 +20,7 @@
 </p>
 <p>
   <% Category.all.each do |category| %>
-    <%= check_box_tag "grocery[category_ids][]", category.id %>
+    <%= check_box_tag "grocery[category_ids][]", category.id, @grocery.category_ids.include?(category.id) %>
     <%= category.name%>
   <% end %>
 </p>
