@@ -6,13 +6,14 @@
    <th> Number</th>
    <th> Explanation</th>
    <th> Bought</th>
+   <th> </th>
+   <th> </th>
   </tr>
 
   <%= render partial: 'grocery', collection: @groceries %>
   </table>
-    <%= link_to 'NewGroceryList  ', new_grocery_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-plus aria-hidden="true"' %>
-
-    <%= link_to 'CategoryList', categories_path, class: 'glyphicon glyphicon-list aria-hidden="true"'%>
+  <%= icon_link 'plus', 'New grocery list', new_grocery_path %>
+  <%= icon_link 'list', 'Category list', categories_path %>
 
 
 
