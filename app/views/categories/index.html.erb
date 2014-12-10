@@ -9,6 +9,9 @@
 </table>
 <%= link_to 'NewCategory', new_category_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-plus aria-hidden="true"' %>
 <%= link_to "Home", groceries_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-home aria-hidden="true"' %>
+<%= link_to 'groceries_list', groceries_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-tasks' %>
 
 
-
+ <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>

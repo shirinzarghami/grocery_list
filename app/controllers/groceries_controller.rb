@@ -20,7 +20,12 @@ class GroceriesController < ApplicationController
   end
 
   def index
-    @groceries = Grocery.all
+    @groceries = if params[:category_id]
+      @category= Category.find(params[:category_id])
+      @category.groceries
+    else
+      Grocery.all
+    end
   end
 
   def edit

@@ -15,6 +15,10 @@
   <%= icon_link 'plus', 'New grocery list', new_grocery_path %>
   <%= icon_link 'list', 'Category list', categories_path %>
 
+ <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
+
 
 
 
