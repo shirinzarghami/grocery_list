@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     resources :groceries, only: [:index]
    end
     # root 'welcome#index'
-   root :to => "groceries#index"
+   root :to => "categories#index"
 
 end

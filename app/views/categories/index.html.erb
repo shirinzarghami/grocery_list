@@ -1,17 +1,18 @@
+</ol>
 <h2>Categories list</h2>
 <table class="table table-hover table-striped">
   <thead>
-    <tr> category name </tr>
+    <h4> category name </h4>
   </thead>
   <tbody>
     <tr> <%= render partial: 'category', collection: @categories %></tr>
   </tbody>
 </table>
 <%= link_to 'NewCategory', new_category_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-plus aria-hidden="true"' %>
-<%= link_to "Home", groceries_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-home aria-hidden="true"' %>
 <%= link_to 'groceries_list', groceries_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-tasks' %>
 
 
  <% flash.each do |name, msg| -%>
   <%= content_tag :div, msg, class: name %>
 <% end -%>
+
