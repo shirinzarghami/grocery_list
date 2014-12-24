@@ -3,6 +3,7 @@ class GroceriesController < ApplicationController
   def new
     @grocery= Grocery.new()
     @category = Category.new()
+     add_crumb "Add new grocery list", 'new_grocery'
   end
 
   def create
@@ -21,14 +22,17 @@ class GroceriesController < ApplicationController
 
   def index
     @groceries = if params[:category_id]
+      add_crumb "grocery list", 'grocery'
       @category= Category.find(params[:category_id])
       @category.groceries
     else
+      add_crumb "grocery lists", 'groceries'
       Grocery.all
     end
   end
 
   def edit
+    add_crumb "Edit grocery list", 'edit_grocery'
     @grocery= Grocery.find(params[ :id])
 
   end

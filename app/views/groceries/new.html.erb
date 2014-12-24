@@ -1,6 +1,3 @@
-  <li><a href=/groceries> Grocery List </a></li>
-  <li> New grocery list </a></li>
-</ol>
 <%= form_for :grocery, url: groceries_path  do |f| %>
   <% if @grocery.errors.any? %>
     <div id="error_explanation">

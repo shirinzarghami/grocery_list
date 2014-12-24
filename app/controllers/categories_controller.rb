@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def new
     @category=Category.new()
+    add_crumb "Add new category", 'new_category'
   end
 
   def create
@@ -14,11 +15,11 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
-
   end
 
   def edit
     @category= Category.find(params[ :id])
+    add_crumb "Edit Category",'edit_category'
   end
 
   def update

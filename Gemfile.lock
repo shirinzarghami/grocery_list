@@ -32,7 +32,6 @@ GEM
       execjs
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
-    breadcrumbs_on_rails (2.3.0)
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -123,7 +122,6 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.2.0)
-  breadcrumbs_on_rails
   byebug
   coffee-rails (~> 4.0.0)
   crummy (~> 1.8.0)

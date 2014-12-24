@@ -1,9 +1,10 @@
 <form class: "form-inline" role: "form">
+  <%= render_crumbs %>
   <div class="form-group">
     <%= f.label :"Category name" %><br>
     <%= f.text_field :name %>
     <%= f.submit class: 'btn btn-default btn-xs'%><br>
     <%= link_to "Back", categories_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-arrow-left aria-hidden="true"' %>
-    <%= link_to "Home", categories_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-home ' %>
+    <%= link_to "Home", categories_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-home aria-hid' %>
   </div>
 </form>
