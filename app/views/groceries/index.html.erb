@@ -10,6 +10,9 @@
    <th> </th>
    <th> </th>
   </tr>
+   <th> </th>
+   <th> </th>
+  </tr>
 
   <%= render partial: 'grocery', collection: @groceries %>
   </table>
@@ -20,6 +23,7 @@
   <%= content_tag :div, msg, class: name %>
 <% end -%>
 <%= link_to "Home", categories_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-home aria-hidden="true"' %>
+
 
 
 
