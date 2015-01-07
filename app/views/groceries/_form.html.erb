@@ -26,6 +26,11 @@
       <%= category.name%>
     <% end %>
   </p>
+  <div class="field">
+    <%= f.label :photo %> <br>
+    <%= f.file_field :photo %>
+  </div>
+
  <!-- camera part -->
 
 <video id="video" width="340" height="180" autoplay></video>

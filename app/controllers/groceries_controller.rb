@@ -56,6 +56,6 @@ class GroceriesController < ApplicationController
 
   private
   def grocery_params
-    params.require(:grocery).permit(:name, :number, :category, :explanation, :bought, category_ids: [])
+    params.require(:grocery).permit(:name, :number, :category, :explanation, :bought, :photo , category_ids: [])
   end
 end

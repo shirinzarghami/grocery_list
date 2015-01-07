@@ -134,7 +134,7 @@ DEPENDENCIES
   crummy (~> 1.8.0)
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 4.1)
+  paperclip (~> 4.2)
   pg
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)

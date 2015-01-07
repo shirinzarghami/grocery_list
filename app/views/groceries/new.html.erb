@@ -11,5 +11,9 @@
     </div>
   <% end %>
   <%= render partial: 'form', locals: {f: f} %>
+  <div class="field">
+    <%= f.label :photo %> <br>
+    <%= f.file_field :photo %>
+  </div>
 <% end %>
 
