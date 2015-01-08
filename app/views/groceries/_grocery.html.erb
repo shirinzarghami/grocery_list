@@ -4,7 +4,12 @@
   <td><%= grocery.number %></td>
   <td><%= grocery.explanation %></td>
   <td><%= grocery.bought ? 'yes' : 'no' %></td>
-  <td><%= image_tag grocery.photo.url(:thumb) %></td>
+
+  <td>
+    <% if grocery.photo_file_name.present? %>
+      <%= image_tag grocery.photo.url(:thumb) %>
+    <% end %>
+  </td>
 
   <td> <%= icon_link 'pencil', 'Edit', edit_grocery_path(grocery) %></td>
   <td> <%= icon_link 'trash', 'Destroy', grocery_path(grocery), method: :delete, data: { confirm: 'Are u sure'} %></td>

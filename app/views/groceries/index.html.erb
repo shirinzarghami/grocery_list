@@ -7,12 +7,9 @@
    <th> Number</th>
    <th> Explanation</th>
    <th> Bought</th>
+   <th> Photo</th>
    <th> </th>
    <th> </th>
-  </tr>
-   <th> </th>
-   <th> </th>
-  </tr>
 
   <%= render partial: 'grocery', collection: @groceries %>
   </table>
@@ -22,7 +19,7 @@
  <% flash.each do |name, msg| -%>
   <%= content_tag :div, msg, class: name %>
 <% end -%>
-<%= link_to "Home", categories_path, class: 'btn btn-link btn-xs', class: 'glyphicon glyphicon-home aria-hidden="true"' %>
+<%= icon_link 'home', 'Home', categories_path %>
 
 
 
