@@ -1,5 +1,7 @@
 <tr>
-  <td><%= grocery.categories.map {|c| c.name}.join(', ') %></td>
+  <% unless @category_filter %>
+    <td><%= grocery.categories.map {|c| c.name}.join(', ') %></td>
+  <% end %>
   <td> <%= grocery.name %></td>
   <td><%= grocery.number %></td>
   <td><%= grocery.explanation %></td>

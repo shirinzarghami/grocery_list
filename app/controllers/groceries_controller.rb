@@ -21,9 +21,10 @@ class GroceriesController < ApplicationController
   end
 
   def index
-    @groceries = if params[:category_id]
+    @category_filter = params[:category_id]
+    @groceries = if @category_filter
       add_crumb "grocery list", 'grocery'
-      @category= Category.find(params[:category_id])
+      @category = Category.find(@category_filter)
       @category.groceries
     else
       add_crumb "grocery lists", 'groceries'
