@@ -6,7 +6,12 @@
   <td><%= grocery.number %></td>
   <td><%= grocery.explanation %></td>
   <td><%= grocery.bought ? 'yes' : 'no' %></td>
-
+  <td>
+    <%= form_for grocery, url: grocery_path(grocery), method: :patch  do |f| %>
+      <%= f.check_box :bought, {}, "true", "false"%>
+       <%= f.submit class: 'btn btn-default btn-xs'%><br>
+    <% end %>
+  </td>
   <td>
     <% if grocery.photo_file_name.present? %>
       <%= image_tag grocery.photo.url(:thumb) %>
