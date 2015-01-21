@@ -25,10 +25,10 @@ class GroceriesController < ApplicationController
     @groceries = if @category_filter
       add_crumb "grocery list", 'grocery'
       @category = Category.find(@category_filter)
-      @category.groceries
+      @category.groceries.by_name
     else
       add_crumb "grocery lists", 'groceries'
-      Grocery.all
+      Grocery.by_name
     end
   end
 
