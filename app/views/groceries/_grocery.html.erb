@@ -8,7 +8,7 @@
   <td><%= grocery.bought ? 'yes' : 'no' %></td>
   <td>
     <%= form_for grocery, url: grocery_path(grocery), method: :patch  do |f| %>
-      <%= f.check_box :bought, {}, "true", "false"%>
+      <%= f.check_box :bought,{ class: 'bought_check' }, "true", "false"%>
        <%= f.submit class: 'btn btn-default btn-xs'%><br>
     <% end %>
   </td>

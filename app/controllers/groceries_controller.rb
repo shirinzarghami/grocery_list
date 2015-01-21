@@ -42,9 +42,13 @@ class GroceriesController < ApplicationController
     # debugger
     @grocery = Grocery.find(params[:id])
     if @grocery.update(grocery_params)
-      redirect_to :action => 'index'
+      if request.xhr?
+        render nothing: true
+      else
+        redirect_to :action => 'index'
+      end
     else
-      render 'edit'
+      request.xhr? ? render(nothing: true, status: :unprocessable_entity) : render('edit')
     end
   end
 
